@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dp10"
+    app:cardCornerRadius="@dimen/dp30"
+    app:cardBackgroundColor="@color/kozepesNarancs" >
+
+    <ImageView
+        android:id="@+id/itemKep"
+        android:layout_width="600dp"
+        android:layout_height="240dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="@dimen/dp10"
+        android:layout_marginEnd="@dimen/dp10"
+        android:layout_marginBottom="@dimen/dp15"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/kep"
+        android:scaleType="fitXY" />
+
+    <TextView
+        android:id="@+id/hanyadikKep"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginTop="260dp"
+        android:layout_marginBottom="@dimen/dp5"
+        android:textAlignment="center"
+        android:textSize="@dimen/sp26"
+        android:textColor="@color/feher" />
+
+</androidx.cardview.widget.CardView>

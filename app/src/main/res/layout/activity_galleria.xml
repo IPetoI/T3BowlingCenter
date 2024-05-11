@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/hatterkep"
+    tools:context=".Activitys.GalleriaActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/felsoNavAlap"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp60"
+        android:background="@color/sotetNarancs"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <ImageView
+            android:id="@+id/kisLogo"
+            android:layout_width="@dimen/dp150"
+            android:layout_height="match_parent"
+            android:src="@drawable/logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:contentDescription="@string/kislogo" />
+
+        <ImageButton
+            android:id="@+id/kijelentkezesImageButton"
+            android:layout_width="@dimen/dp50"
+            android:layout_height="@dimen/dp50"
+            android:layout_marginEnd="@dimen/dp10"
+            android:background="@color/atlatszo"
+            android:contentDescription="@string/kijelentkezes"
+            android:onClick="kijelentkezes"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/kijelentkezes_icon" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewGalleria"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="70dp"
+        android:layout_marginBottom="80dp"
+        android:scrollbars="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/felsoNavAlap" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/alsoNav"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp60"
+        android:layout_marginStart="@dimen/dp15"
+        android:layout_marginTop="@dimen/dp30"
+        android:layout_marginEnd="@dimen/dp15"
+        android:layout_marginBottom="@dimen/dp15"
+        android:background="@drawable/bot_nav_back"
+        app:itemIconSize="@dimen/dp30"
+        app:itemIconTint="@drawable/item_kijeloles"
+        app:itemRippleColor="@color/atlatszoSarga"
+        app:itemActiveIndicatorStyle="@color/atlatszoSarga"
+        app:labelVisibilityMode="unlabeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/also_menu" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/hatterkep"
+    tools:context=".Activitys.BejelentkezesActivity">
+
+    <ScrollView
+        android:id="@+id/bejelentkezesGorgetes"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/bejelentkezesGorgetesAlap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/dp10"
+            android:layout_marginEnd="@dimen/dp10"
+            android:layout_marginBottom="@dimen/dp30"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/bejelentkezesNagyLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp260"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dp80"
+                android:contentDescription="@string/nagylogo"
+                android:orientation="vertical"
+                android:src="@drawable/nagy_logo" />
+
+            <LinearLayout
+                android:id="@+id/bejelentkezesRelativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/dp20"
+                android:layout_marginTop="@dimen/dp20"
+                android:layout_marginEnd="@dimen/dp20"
+                android:background="@drawable/card_backg"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/bejelentkezesEditTextEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp15"
+                    android:layout_marginTop="@dimen/dp15"
+                    android:layout_marginEnd="@dimen/dp15"
+                    android:layout_marginBottom="@dimen/dp5"
+                    android:autofillHints="emailAddress"
+                    android:backgroundTint="@color/feher"
+                    android:hint="@string/email"
+                    android:inputType="textEmailAddress"
+                    android:textAlignment="center"
+                    android:textColor="@color/feher"
+                    android:textColorHint="@color/feher"
+                    android:textSize="@dimen/sp20" />
+
+                <EditText
+                    android:id="@+id/bejelentkezesEditTextJelszo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp15"
+                    android:layout_marginEnd="@dimen/dp15"
+                    android:layout_marginBottom="@dimen/dp25"
+                    android:autofillHints="password"
+                    android:backgroundTint="@color/feher"
+                    android:hint="@string/jelszo"
+                    android:inputType="textPassword"
+                    android:textAlignment="center"
+                    android:textColor="@color/feher"
+                    android:textColorHint="@color/feher"
+                    android:textSize="@dimen/sp20" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/bejelentkezesEmailGomb"
+                    android:layout_width="290dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp30"
+                    android:layout_marginEnd="@dimen/dp30"
+                    android:layout_marginBottom="@dimen/dp15"
+                    android:background="@drawable/gomb_backg"
+                    android:onClick="bejelentkezes"
+                    android:text="@string/bejelentkezes"
+                    android:textColor="@color/feher"
+                    android:textSize="@dimen/sp16" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/bejelentkezesGoogleGomb"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp30"
+                    android:layout_marginEnd="@dimen/dp30"
+                    android:layout_marginBottom="@dimen/dp15"
+                    android:background="@drawable/gomb_backg"
+                    android:onClick="bejelentkezesGoogle"
+                    android:text="@string/bejelentkezes_google"
+                    android:textColor="@color/feher"
+                    android:textSize="@dimen/sp16" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/bejelentkezesVendegGomb"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp30"
+                    android:layout_marginEnd="@dimen/dp30"
+                    android:layout_marginBottom="@dimen/dp30"
+                    android:background="@drawable/gomb_backg"
+                    android:onClick="bejelentkezesVendeg"
+                    android:text="@string/bejelentkezes_vendeg"
+                    android:textColor="@color/feher"
+                    android:textSize="@dimen/sp16" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/regisztacioGomb"
+                    android:layout_width="@dimen/dp146"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp106"
+                    android:layout_marginEnd="@dimen/dp106"
+                    android:layout_marginBottom="@dimen/dp20"
+                    android:background="@drawable/gomb_backg"
+                    android:onClick="regisztracio"
+                    android:text="@string/regisztracio"
+                    android:textColor="@color/feher"
+                    android:textSize="@dimen/sp16" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

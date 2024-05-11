@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
+
+        <item
+            android:id="@+id/kezdolap"
+            android:title="@string/kezdolap"
+            android:icon="@drawable/kezdolap_icon"
+            app:showAsAction="always" />
+
+        <item
+            android:id="@+id/palyafoglalas"
+            android:title="@string/palyafoglalas"
+            android:icon="@drawable/palyafoglalas_icon"
+            app:showAsAction="always" />
+
+        <item
+            android:id="@+id/profil"
+            android:title="@string/profil"
+            android:icon="@drawable/profil_icon"
+            app:showAsAction="always" />
+
+        <item
+            android:id="@+id/galleria"
+            android:title="@string/galleria"
+            android:icon="@drawable/galleria_icon"
+            app:showAsAction="always" />
+
+        <item
+            android:id="@+id/rolunk"
+            android:title="@string/rolunk"
+            android:icon="@drawable/rolunk_icon"
+            app:showAsAction="always" />
+</menu>

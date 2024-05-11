@@ -1,0 +1,92 @@
+<resources>
+    <string-array name="hanyadikKep">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+    </string-array>
+
+    <string-array name="kepElerese">
+        <item>@drawable/kep01</item>
+        <item>@drawable/kep02</item>
+        <item>@drawable/kep03</item>
+        <item>@drawable/kep04</item>
+        <item>@drawable/kep05</item>
+        <item>@drawable/kep06</item>
+        <item>@drawable/kep07</item>
+        <item>@drawable/kep08</item>
+        <item>@drawable/kep09</item>
+    </string-array>
+
+    <string name="app_name">T3 Bowling Center</string>
+    <string name="email">E-mail</string>
+    <string name="jelszo">Jelszó</string>
+    <string name="bejelentkezes">Bejelentkezés</string>
+    <string name="regisztracio">Regisztráció</string>
+    <string name="nev">Név</string>
+    <string name="vissza">Vissza</string>
+    <string name="jelsz_megerosites">Jelszó megerősítése</string>
+    <string name="regisztralok">Regisztrálok</string>
+    <string name="telefonszam">Telefonszám</string>
+    <string name="bejelentkezes_vendeg">Bejelentkezés Vendégként</string>
+    <string name="bejelentkezes_google">Bejelentkezés Google fiókkal</string>
+    <string name="t3_bowling_center_h1">T3 Bowling Center</string>
+    <string name="palyafoglalas">Pályafoglalás</string>
+    <string name="galleria">Galléria</string>
+    <string name="rolunk">Rólunk</string>
+    <string name="kezdolap">Kezdőlap</string>
+    <string name="kijelentkezes">Kijelentkezés</string>
+    <string name="beallitasok">Beállítások</string>
+    <string name="programok">Programok</string>
+    <string name="araink">Áraink</string>
+    <string name="elerhetosegek">Elérhetőségek</string>
+    <string name="nyitvatartas">Nyitvatartás</string>
+    <string name="nyitvatartasiIdopontok">Hétfő - Péntek : 14:00 - 20:00 \n Szombat : 14:00 - 24:00 \n Vasárnap : 10:00 - 20:00</string>
+    <string name="terkep">Térkép</string>
+    <string name="telefonszamErtek">+36 70 000 0000</string>
+    <string name="emailErtek">t3bowlingc@gmail.com</string>
+    <string name="title_activity_kep_teljes">KepTeljesActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="kereses">Keresés</string>
+    <string name="yyyy_mm_dd">YYYY/MM/DD</string>
+    <string name="melyik_nap">Melyik Nap?</string>
+    <string name="melyik_ora">Melyik Órában?</string>
+    <string name="plus">+</string>
+    <string name="minus">-</string>
+    <string name="ketto">2</string>
+    <string name="hanyan_jottok">Hányan jöttök?</string>
+    <string name="foglalok">Foglalok</string>
+    <string name="olcsobb">Jelentkezz be és 5%-kal olcsóbban bowlingozhatsz!</string>
+    <string name="nagylogo">NagyLogo</string>
+    <string name="kislogo">kisLogo</string>
+    <string name="bal_babu">Bal Bábú</string>
+    <string name="jobb_babu">Jobb Bábú</string>
+    <string name="kep">Kép</string>
+    <string name="telefon">Telefon</string>
+    <string name="profil">Profil</string>
+    <string name="profil_nev">Név:</string>
+    <string name="profil_email">E-mail:</string>
+    <string name="prof_tel">Tel.:</string>
+    <string name="tel_szerkesztes">Telefonszám szerkesztése</string>
+    <string name="email_szerkesztese">E-mail szerkesztése</string>
+    <string name="foglalasok">Foglalások</string>
+    <string name="hanyan">Hányan</string>
+    <string name="datum">Dátum</string>
+    <string name="ora">Óra</string>
+    <string name="idopont_torlese">Időpont törlése</string>
+    <string name="x">X</string>
+    <string name="adatok">Adatok</string>
+    <string name="ar">Ár</string>
+    <string name="hetkoznap_ar">4000 Ft</string>
+    <string name="telefon_magyar">+36&#160;</string>
+    <string name="nincs_foglalas">Még nincs Foglalás rögzítve.</string>
+    <string name="palyafoglalas_nincs_hely">Sajnáljuk! \nNincs több szabad hely a megadott napra!</string>
+    <string name="weboldalunk">Weboldalunk</string>
+    <string name="default_web_client_id">354993943159-4rjv0q67ges401mpjor2duiq2np5gl25.apps.googleusercontent.com</string>
+</resources>

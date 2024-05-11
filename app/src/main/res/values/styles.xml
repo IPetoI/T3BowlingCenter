@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme.PopupOverlay" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/feher</item>
+        <item name="colorPrimaryDark">@color/fekete</item>
+        <item name="colorAccent">@color/feher</item>
+        <item name="android:windowBackground">@color/fekete</item>
+    </style>
+
+    <style name="CustomDatePickerDialog" parent="@android:style/Theme.Material.Light.Dialog">
+        <item name="android:windowBackground">@color/kozepesNarancs</item>
+        <item name="android:colorAccent">@color/feketeNarancs</item>
+        <item name="android:textColor">@color/feher</item>
+        <item name="android:textColorSecondaryInverse">@color/feher</item>
+        <item name="android:textColorSecondary">@color/feher</item>
+        <item name="android:textColorPrimary">@color/feher</item>
+        <item name="android:textColorPrimaryInverse">@color/feher</item>
+        <item name="android:colorControlActivated">@color/sotetNarancs</item>
+        <item name="android:text">@color/feher</item>
+        <item name="android:color">@color/feher</item>
+        <item name="android:button">@color/feher</item>
+        <item name="android:positiveButtonText">@color/feher</item>
+        <item name="android:negativeButtonText">@color/feher</item>
+    </style>
+
+</resources>

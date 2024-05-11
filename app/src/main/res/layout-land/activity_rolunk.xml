@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/hatterkep"
+    tools:context=".Activitys.RolunkActivity" >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/felsoNavAlap"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp60"
+        android:background="@color/sotetNarancs"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <ImageView
+            android:id="@+id/kisLogo"
+            android:layout_width="@dimen/dp150"
+            android:layout_height="match_parent"
+            android:src="@drawable/logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:contentDescription="@string/kislogo" />
+
+        <ImageButton
+            android:id="@+id/kijelentkezesImageButton"
+            android:layout_width="@dimen/dp50"
+            android:layout_height="@dimen/dp50"
+            android:layout_marginEnd="@dimen/dp10"
+            android:background="@color/atlatszo"
+            android:contentDescription="@string/kijelentkezes"
+            android:onClick="kijelentkezes"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/kijelentkezes_icon" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:id="@+id/rolunkGorgetes"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/felsoNavAlap" >
+
+        <LinearLayout
+            android:id="@+id/gorgetesAlap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp10"
+            android:layout_marginEnd="@dimen/dp10"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/rolunkCimTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="120dp"
+                android:layout_marginTop="@dimen/dp25"
+                android:layout_marginEnd="120dp"
+                android:background="@drawable/card_backg"
+                android:text="@string/rolunk"
+                android:textAlignment="center"
+                android:textColor="@color/feher"
+                android:textSize="@dimen/sp45" />
+
+            <RelativeLayout
+                android:id="@+id/elerhetosegekAlap"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/dp80"
+                android:layout_marginTop="@dimen/dp30"
+                android:layout_marginEnd="@dimen/dp80"
+                android:background="@drawable/card_backg" >
+
+                <TextView
+                    android:id="@+id/elerhetosegekCim"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/elerhetosegek"
+                    android:textAlignment="center"
+                    android:textColor="@color/feher"
+                    android:textSize="@dimen/sp26" />
+
+                <ImageView
+                    android:id="@+id/elerhetosegekBalBabu"
+                    android:layout_width="170dp"
+                    android:layout_height="140dp"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:src="@drawable/babu_bal_o"
+                    android:contentDescription="@string/bal_babu" />
+
+                <ImageView
+                    android:id="@+id/mobilIcon"
+                    android:layout_width="@dimen/dp150"
+                    android:layout_height="@dimen/dp50"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="100dp"
+                    android:layout_marginTop="55dp"
+                    android:layout_marginBottom="35dp"
+                    android:src="@drawable/mobil"
+                    android:contentDescription="@string/telefon" />
+
+                <TextView
+                    android:id="@+id/mobilCim"
+                    android:layout_width="@dimen/dp150"
+                    android:layout_height="@dimen/dp50"
+                    android:layout_below="@+id/mobilIcon"
+                    android:layout_marginStart="100dp"
+                    android:layout_marginTop="-30dp"
+                    android:text="@string/telefonszamErtek"
+                    android:textAlignment="center"
+                    android:textColor="@color/feher"
+                    android:textSize="@dimen/sp12"
+                    android:textIsSelectable="true" />
+
+                <ImageView
+                    android:id="@+id/emailIcon"
+                    android:layout_width="200dp"
+                    android:layout_height="@dimen/dp30"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="@dimen/dp60"
+                    android:layout_marginEnd="100dp"
+                    android:layout_marginBottom="@dimen/dp40"
+                    android:src="@drawable/email"
+                    android:contentDescription="@string/email" />
+
+                <TextView
+                    android:id="@+id/emailCim"
+                    android:layout_width="200dp"
+                    android:layout_height="@dimen/dp50"
+                    android:layout_below="@+id/emailIcon"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="@dimen/dp10"
+                    android:layout_marginTop="-30dp"
+                    android:layout_marginEnd="100dp"
+                    android:text="@string/emailErtek"
+                    android:textAlignment="center"
+                    android:textColor="@color/feher"
+                    android:textSize="@dimen/sp12"
+                    android:textIsSelectable="true" />
+
+                <ImageView
+                    android:id="@+id/elerhetosegekJobbBabu"
+                    android:layout_width="170dp"
+                    android:layout_height="140dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:contentDescription="@string/jobb_babu"
+                    android:src="@drawable/babu_jobb_o" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/nyitvatartasAlap"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/dp80"
+                android:layout_marginTop="@dimen/dp60"
+                android:layout_marginEnd="@dimen/dp80"
+                android:layout_marginBottom="@dimen/dp60"
+                android:background="@drawable/card_backg" >
+
+                <TextView
+                    android:id="@+id/nyitvatartasCim"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/nyitvatartas"
+                    android:textAlignment="center"
+                    android:textColor="@color/feher"
+                    android:textSize="@dimen/sp26" />
+
+                <ImageView
+                    android:id="@+id/nyitvatartasBalBabu"
+                    android:layout_width="@dimen/dp150"
+                    android:layout_height="140dp"
+                    android:layout_marginStart="@dimen/dp10"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:src="@drawable/babu_bal_o"
+                    android:contentDescription="@string/bal_babu" />
+
+                <TextView
+                    android:id="@+id/nyitvatartas"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="45dp"
+                    android:layout_marginBottom="@dimen/dp20"
+                    android:lineSpacingExtra="7dp"
+                    android:text="@string/nyitvatartasiIdopontok"
+                    android:textAlignment="center"
+                    android:textColor="@color/feher"
+                    android:textSize="@dimen/sp18" />
+
+                <ImageView
+                    android:id="@+id/nyitvatartasJobbBabu"
+                    android:layout_width="@dimen/dp150"
+                    android:layout_height="140dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/dp10"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:contentDescription="@string/jobb_babu"
+                    android:src="@drawable/babu_jobb_o" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/terkepAlap"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/dp80"
+                android:layout_marginEnd="@dimen/dp80"
+                android:layout_marginBottom="120dp"
+                android:background="@drawable/card_backg" >
+
+                <TextView
+                    android:id="@+id/terkepCim"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/terkep"
+                    android:textAlignment="center"
+                    android:textColor="@color/feher"
+                    android:textSize="@dimen/dp25" />
+
+                <ImageView
+                    android:id="@+id/terkepBalBabu"
+                    android:layout_width="150dp"
+                    android:layout_height="140dp"
+                    android:layout_marginStart="@dimen/dp10"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:src="@drawable/babu_bal_o"
+                    android:contentDescription="@string/bal_babu" />
+
+                <ImageButton
+                    android:id="@+id/terkep"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp80"
+                    android:layout_marginTop="@dimen/dp50"
+                    android:layout_marginBottom="@dimen/dp25"
+                    android:layout_toStartOf="@+id/terkepJobbBabu"
+                    android:layout_toEndOf="@+id/terkepBalBabu"
+                    android:background="@color/atlatszo"
+                    android:contentDescription="@string/terkep"
+                    android:onClick="googleMapLink"
+                    android:padding="@dimen/dp5"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/terkep_icon" />
+
+                <ImageView
+                    android:id="@+id/terkepJobbBabu"
+                    android:layout_width="@dimen/dp150"
+                    android:layout_height="140dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/dp10"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:contentDescription="@string/jobb_babu"
+                    android:src="@drawable/babu_jobb_o" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/alsoNav"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp60"
+        android:layout_marginStart="@dimen/dp15"
+        android:layout_marginTop="@dimen/dp30"
+        android:layout_marginEnd="@dimen/dp15"
+        android:layout_marginBottom="@dimen/dp15"
+        android:background="@drawable/bot_nav_back"
+        app:itemIconSize="@dimen/dp30"
+        app:itemIconTint="@drawable/item_kijeloles"
+        app:itemRippleColor="@color/atlatszoSarga"
+        app:itemActiveIndicatorStyle="@color/atlatszoSarga"
+        app:labelVisibilityMode="unlabeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/also_menu" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

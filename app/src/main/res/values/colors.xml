@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="fekete">#FF000000</color>
+    <color name="feher">#FFFFFFFF</color>
+    <color name="atlatszo">#00606060</color>
+    <color name="atlatszoSarga">#1AFFC107</color>
+    <color name="narancs">#FDD400</color>
+    <color name="kozepesNarancs">#FF9205</color>
+    <color name="arany">#FEF857</color>
+    <color name="sotetNarancs">#CE5501</color>
+    <color name="feketeNarancs">#9A4D00</color>
+</resources>

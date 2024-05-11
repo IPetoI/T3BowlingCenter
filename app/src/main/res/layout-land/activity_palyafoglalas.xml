@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/hatterkep"
+    tools:context=".Activitys.PalyafoglalasActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/felsoNavAlap"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp60"
+        android:background="@color/sotetNarancs"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <ImageView
+            android:id="@+id/kisLogo"
+            android:layout_width="@dimen/dp150"
+            android:layout_height="match_parent"
+            android:src="@drawable/logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:contentDescription="@string/kislogo" />
+
+        <ImageButton
+            android:id="@+id/kijelentkezesImageButton"
+            android:layout_width="@dimen/dp50"
+            android:layout_height="@dimen/dp50"
+            android:layout_marginEnd="@dimen/dp10"
+            android:background="@color/atlatszo"
+            android:contentDescription="@string/kijelentkezes"
+            android:onClick="kijelentkezes"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/kijelentkezes_icon" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:id="@+id/palyafoglalasGorgetes"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dp60"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/felsoNavAlap" >
+
+        <LinearLayout
+            android:id="@+id/gorgetesAlap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp10"
+            android:layout_marginEnd="@dimen/dp10"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/palyafoglalasCimTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="120dp"
+                android:layout_marginTop="@dimen/dp50"
+                android:layout_marginEnd="120dp"
+                android:background="@drawable/card_backg"
+                android:text="@string/palyafoglalas"
+                android:textAlignment="center"
+                android:textColor="@color/feher"
+                android:textSize="@dimen/sp45" />
+
+            <RelativeLayout
+                android:id="@+id/palyafoglalasAlap"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dp30"
+                android:layout_marginStart="@dimen/dp80"
+                android:layout_marginEnd="@dimen/dp80"
+                android:layout_marginBottom="100dp"
+                android:background="@drawable/card_backg" >
+
+                <EditText
+                    android:id="@+id/palyafoglalasNevEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp15"
+                    android:layout_marginTop="@dimen/dp15"
+                    android:layout_marginEnd="@dimen/dp15"
+                    android:backgroundTint="@color/feher"
+                    android:hint="@string/nev"
+                    android:importantForAutofill="yes"
+                    android:autofillHints="name"
+                    android:inputType="text"
+                    android:textColor="@color/feher"
+                    android:textColorHint="@color/feher"
+                    android:textAlignment="center" />
+
+                <EditText
+                    android:id="@+id/palyafoglalasEmailEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/palyafoglalasNevEditText"
+                    android:layout_marginStart="@dimen/dp15"
+                    android:layout_marginTop="@dimen/dp15"
+                    android:layout_marginEnd="@dimen/dp15"
+                    android:backgroundTint="@color/feher"
+                    android:hint="@string/email"
+                    android:importantForAutofill="yes"
+                    android:autofillHints="emailAddress"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/feher"
+                    android:textColorHint="@color/feher"
+                    android:textAlignment="center" />
+
+                <EditText
+                    android:id="@+id/palyafoglalasTelEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/palyafoglalasEmailEditText"
+                    android:layout_marginStart="@dimen/dp15"
+                    android:layout_marginTop="@dimen/dp15"
+                    android:layout_marginEnd="@dimen/dp15"
+                    android:layout_marginBottom="@dimen/dp15"
+                    android:text="@string/telefonszam"
+                    android:maxLength="15"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:onClick="felhasznaloTelefonEditTextClickFog"
+                    android:importantForAutofill="yes"
+                    android:autofillHints="phone"
+                    android:inputType="phone"
+                    android:textColor="@color/feher"
+                    android:backgroundTint="@color/feher"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/hanyanJottokTextViewCim"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/palyafoglalasTelEditText"
+                    android:text="@string/hanyan_jottok"
+                    android:textAlignment="center"
+                    android:textColor="@color/feher"
+                    android:textSize="@dimen/sp20" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/minuszButton"
+                    android:layout_width="100dp"
+                    android:layout_height="@dimen/dp40"
+                    android:layout_below="@+id/hanyanJottokTextViewCim"
+                    android:layout_marginTop="@dimen/dp5"
+                    android:layout_marginEnd="70dp"
+                    android:layout_toStartOf="@+id/hanyanJottokTextView"
+                    android:background="@drawable/gomb_backg"
+                    android:onClick="kevesebbenJonnek"
+                    android:text="@string/minus"
+                    android:textColor="@color/feher"
+                    android:textSize="@dimen/sp20" />
+
+                <TextView
+                    android:id="@+id/hanyanJottokTextView"
+                    android:layout_width="100dp"
+                    android:layout_height="@dimen/dp40"
+                    android:layout_below="@+id/hanyanJottokTextViewCim"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/dp5"
+                    android:gravity="center"
+                    android:text="@string/ketto"
+                    android:textColor="@color/feher"
+                    android:textSize="@dimen/sp20" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/pluszButton"
+                    android:layout_width="100dp"
+                    android:layout_height="@dimen/dp40"
+                    android:layout_below="@+id/hanyanJottokTextViewCim"
+                    android:layout_marginStart="70dp"
+                    android:layout_marginTop="@dimen/dp5"
+                    android:layout_toEndOf="@+id/hanyanJottokTextView"
+                    android:background="@drawable/gomb_backg"
+                    android:onClick="tobbenJonnek"
+                    android:text="@string/plus"
+                    android:textColor="@color/feher"
+                    android:textSize="@dimen/sp20" />
+
+                <TextView
+                    android:id="@+id/palyafoglalasNapTextView"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/hanyanJottokTextView"
+                    android:layout_marginStart="@dimen/dp80"
+                    android:layout_marginTop="@dimen/dp40"
+                    android:layout_marginEnd="@dimen/dp15"
+                    android:gravity="center"
+                    android:hint="@string/yyyy_mm_dd"
+                    android:textColor="@color/feher"
+                    android:textColorHint="@color/feher"
+                    android:textSize="@dimen/sp18" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/napGomb"
+                    android:layout_width="140dp"
+                    android:layout_height="45dp"
+                    android:layout_below="@+id/hanyanJottokTextView"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="60dp"
+                    android:layout_marginTop="35dp"
+                    android:layout_marginEnd="80dp"
+                    android:layout_toEndOf="@+id/palyafoglalasNapTextView"
+                    android:background="@drawable/gomb_backg"
+                    android:onClick="napKivalasztas"
+                    android:text="@string/melyik_nap"
+                    android:textColor="@color/feher" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerViewPalyafoglalas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/napGomb"
+                    android:layout_marginStart="100dp"
+                    android:layout_marginVertical="@dimen/dp10"
+                    android:scrollbars="vertical"
+                    tools:listitem="@layout/idopontok_lista" />
+
+                <TextView
+                    android:id="@+id/palyafoglalasNincsHelyTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/recyclerViewPalyafoglalas"
+                    android:layout_margin="@dimen/dp20"
+                    android:gravity="center"
+                    android:hint="@string/palyafoglalas_nincs_hely"
+                    android:textColor="@color/feher"
+                    android:textColorHint="@color/feher"
+                    android:visibility="gone"
+                    android:textSize="@dimen/sp18" />
+
+                <LinearLayout
+                    android:id="@+id/arLinearLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_below="@+id/palyafoglalasNincsHelyTextView"
+                    android:layout_centerHorizontal="true">
+
+                    <View
+                        android:id="@+id/arFelsoVonal"
+                        android:layout_width="match_parent"
+                        android:layout_height="3dp"
+                        android:background="@color/arany" />
+
+                    <TextView
+                        android:id="@+id/mennyibeKerulTextView"
+                        android:layout_width="160dp"
+                        android:layout_height="@dimen/dp40"
+                        android:gravity="center"
+                        android:text="@string/hetkoznap_ar"
+                        android:textColor="@color/feher"
+                        android:textSize="22sp" />
+
+                    <View
+
+                        android:id="@+id/arAlsoVonal"
+                        android:layout_width="match_parent"
+                        android:layout_height="3dp"
+                        android:background="@color/arany" />
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/palyalefogalas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/arLinearLayout"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="150dp"
+                    android:layout_marginVertical="@dimen/dp20"
+                    android:layout_marginEnd="150dp"
+                    android:layout_toStartOf="@+id/hanyanJottokTextView"
+                    android:background="@drawable/gomb_backg"
+                    android:onClick="palyaLeoglalasa"
+                    android:text="@string/foglalok"
+                    android:textColor="@color/feher"
+                    android:textSize="@dimen/sp20" />
+
+                <TextView
+                    android:id="@+id/regisztralvaOlcsobb"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/palyalefogalas"
+                    android:layout_marginVertical="@dimen/dp15"
+                    android:layout_marginHorizontal="@dimen/dp5"
+                    android:gravity="center"
+                    android:hint="@string/olcsobb"
+                    android:textColor="@color/feher"
+                    android:textColorHint="@color/feher"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/palyafoglalasUzenetek"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/regisztralvaOlcsobb"
+                    android:layout_marginVertical="@dimen/dp10"
+                    android:gravity="center"
+                    android:hint=""
+                    android:textColor="@color/feher"
+                    android:textColorHint="@color/feher"
+                    android:textSize="17sp" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/alsoNav"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp60"
+        android:layout_marginStart="@dimen/dp15"
+        android:layout_marginTop="@dimen/dp30"
+        android:layout_marginEnd="@dimen/dp15"
+        android:layout_marginBottom="@dimen/dp15"
+        android:background="@drawable/bot_nav_back"
+        app:itemIconSize="@dimen/dp30"
+        app:itemIconTint="@drawable/item_kijeloles"
+        app:itemRippleColor="@color/atlatszoSarga"
+        app:itemActiveIndicatorStyle="@color/atlatszoSarga"
+        app:labelVisibilityMode="unlabeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/also_menu" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

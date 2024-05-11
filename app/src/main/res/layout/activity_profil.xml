@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/hatterkep"
+    tools:context=".Activitys.ProfilActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/felsoNavAlap"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp60"
+        android:background="@color/sotetNarancs"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <ImageView
+            android:id="@+id/kisLogo"
+            android:layout_width="@dimen/dp150"
+            android:layout_height="match_parent"
+            android:src="@drawable/logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:contentDescription="@string/kislogo" />
+
+        <ImageButton
+            android:id="@+id/kijelentkezesImageButton"
+            android:layout_width="@dimen/dp50"
+            android:layout_height="@dimen/dp50"
+            android:layout_marginEnd="@dimen/dp10"
+            android:background="@color/atlatszo"
+            android:contentDescription="@string/kijelentkezes"
+            android:onClick="kijelentkezes"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/kijelentkezes_icon" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:id="@+id/palyafoglalasGorgetes"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dp60"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/felsoNavAlap" >
+
+        <LinearLayout
+            android:id="@+id/gorgetesAlap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp10"
+            android:layout_marginEnd="@dimen/dp10"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/profilCimTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp20"
+                android:layout_marginTop="@dimen/dp50"
+                android:layout_marginEnd="@dimen/dp20"
+                android:background="@drawable/card_backg"
+                android:text="@string/profil"
+                android:textAlignment="center"
+                android:textColor="@color/feher"
+                android:textSize="@dimen/sp45" />
+
+            <RelativeLayout
+                android:id="@+id/profilAdatokAlap"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dp30"
+                android:layout_marginBottom="@dimen/dp30"
+                android:background="@drawable/card_backg" >
+
+                <TextView
+                    android:id="@+id/felhasznaloAdataiCim"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp15"
+                    android:text="@string/adatok"
+                    android:textAlignment="center"
+                    android:textColor="@color/feher"
+                    android:textSize="@dimen/sp26" />
+
+                <TextView
+                    android:id="@+id/profilNev"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp30"
+                    android:layout_below="@+id/felhasznaloAdataiCim"
+                    android:layout_marginStart="@dimen/dp30"
+                    android:gravity="center"
+                    android:text="@string/profil_nev"
+                    android:textColor="@color/feher"
+                    android:textSize="@dimen/sp20" />
+
+                <TextView
+                    android:id="@+id/profilNevErtek"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp30"
+                    android:layout_below="@+id/felhasznaloAdataiCim"
+                    android:layout_marginEnd="70dp"
+                    android:layout_marginStart="@dimen/dp30"
+                    android:layout_toEndOf="@+id/profilNev"
+                    android:gravity="center_vertical"
+                    android:text="@string/app_name"
+                    android:textColor="@color/feher"
+                    android:textSize="@dimen/sp16" />
+
+                <TextView
+                    android:id="@+id/profilEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp30"
+                    android:layout_below="@+id/profilNev"
+                    android:layout_marginStart="@dimen/dp30"
+                    android:layout_marginTop="@dimen/dp15"
+                    android:gravity="center"
+                    android:text="@string/profil_email"
+                    android:textColor="@color/feher"
+                    android:textSize="@dimen/sp20" />
+
+                <TextView
+                    android:id="@+id/profilEmailErtek"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp30"
+                    android:layout_marginTop="@dimen/dp15"
+                    android:layout_marginEnd="70dp"
+                    android:layout_marginStart="@dimen/dp10"
+                    android:layout_below="@+id/profilNevErtek"
+                    android:layout_toEndOf="@+id/profilEmail"
+                    android:gravity="center_vertical"
+                    android:text="@string/emailErtek"
+                    android:textColor="@color/feher"
+                    android:textSize="@dimen/sp16" />
+
+                <ImageButton
+                    android:id="@+id/emailSzerkesztesImageButton"
+                    android:layout_width="@dimen/dp50"
+                    android:layout_height="@dimen/dp30"
+                    android:layout_marginTop="@dimen/dp15"
+                    android:layout_marginStart="-60dp"
+                    android:layout_marginEnd="@dimen/dp10"
+                    android:layout_below="@+id/profilNevErtek"
+                    android:layout_toEndOf="@+id/profilEmailErtek"
+                    android:background="@drawable/gomb_backg"
+                    android:contentDescription="@string/email_szerkesztese"
+                    android:onClick="emailSzerkesztese"
+                    app:srcCompat="@drawable/szerkesztes_icon" />
+
+                <TextView
+                    android:id="@+id/profilTel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp30"
+                    android:layout_below="@+id/profilEmail"
+                    android:layout_marginStart="@dimen/dp30"
+                    android:layout_marginTop="@dimen/dp15"
+                    android:gravity="center"
+                    android:text="@string/prof_tel"
+                    android:textColor="@color/feher"
+                    android:textSize="@dimen/sp20" />
+
+                <TextView
+                    android:id="@+id/profilTelErtek"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp30"
+                    android:layout_marginTop="@dimen/dp15"
+                    android:layout_marginEnd="70dp"
+                    android:layout_marginStart="@dimen/dp30"
+                    android:layout_below="@+id/profilEmailErtek"
+                    android:layout_toEndOf="@+id/profilTel"
+                    android:gravity="center_vertical"
+                    android:text="@string/telefonszamErtek"
+                    android:textColor="@color/feher"
+                    android:textSize="@dimen/sp16" />
+
+                <ImageButton
+                    android:id="@+id/telSzerkesztesImageButton"
+                    android:layout_width="@dimen/dp50"
+                    android:layout_height="@dimen/dp30"
+                    android:layout_marginTop="@dimen/dp15"
+                    android:layout_marginStart="-60dp"
+                    android:layout_marginEnd="@dimen/dp10"
+                    android:layout_marginBottom="@dimen/dp20"
+                    android:layout_below="@+id/profilEmailErtek"
+                    android:layout_toEndOf="@+id/profilTelErtek"
+                    android:background="@drawable/gomb_backg"
+                    android:contentDescription="@string/tel_szerkesztes"
+                    android:onClick="telSzerkesztese"
+                    app:srcCompat="@drawable/szerkesztes_icon" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/profilFoglalasaiAlap"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dp30"
+                android:layout_marginBottom="100dp"
+                android:background="@drawable/card_backg" >
+
+                <TextView
+                    android:id="@+id/eddigiFoglalasokCim"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp15"
+                    android:text="@string/foglalasok"
+                    android:textAlignment="center"
+                    android:textColor="@color/feher"
+                    android:textSize="@dimen/sp26" />
+
+                <LinearLayout
+                    android:id="@+id/tablazatFejlec"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/eddigiFoglalasokCim"
+                    android:background="@color/arany"
+                    android:orientation="horizontal"
+                    android:padding="2dp"
+                    android:layout_marginHorizontal="@dimen/dp20" >
+
+                    <TextView
+                        android:id="@+id/fejlecSzemelyekSzama"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@color/feketeNarancs"
+                        android:text="@string/hanyan"
+                        android:gravity="center"
+                        android:textColor="@color/feher"
+                        android:textSize="@dimen/sp16" />
+
+                    <TextView
+                        android:id="@+id/fejlecNap"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@color/feketeNarancs"
+                        android:text="@string/datum"
+                        android:gravity="center"
+                        android:textColor="@color/feher"
+                        android:textSize="@dimen/sp16" />
+
+                    <TextView
+                        android:id="@+id/fejlecOra"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="0.6"
+                        android:background="@color/feketeNarancs"
+                        android:text="@string/ora"
+                        android:gravity="center"
+                        android:textColor="@color/feher"
+                        android:textSize="@dimen/sp16" />
+
+                    <TextView
+                        android:id="@+id/fejlecAr"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="0.7"
+                        android:background="@color/feketeNarancs"
+                        android:text="@string/ar"
+                        android:gravity="center"
+                        android:textColor="@color/feher"
+                        android:textSize="@dimen/sp16" />
+
+                    <TextView
+                        android:id="@+id/fejlecTorles"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="0.5"
+                        android:background="@color/feketeNarancs"
+                        android:text="@string/x"
+                        android:gravity="center"
+                        android:textColor="@color/feher"
+                        android:textSize="@dimen/sp16" />
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerViewProfil"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tablazatFejlec"
+                    android:layout_marginHorizontal="@dimen/dp20"
+                    android:layout_marginBottom="@dimen/dp15"
+                    android:scrollbars="vertical"
+                    tools:listitem="@layout/foglaltidopontok_lista" />
+
+                <TextView
+                    android:id="@+id/profilNincsFoglalas"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp30"
+                    android:layout_marginBottom="@dimen/dp15"
+                    android:layout_below="@+id/recyclerViewProfil"
+                    android:gravity="center"
+                    android:text="@string/nincs_foglalas"
+                    android:textColor="@color/feher"
+                    android:visibility="gone"
+                    android:textSize="@dimen/sp16" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/alsoNav"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp60"
+        android:layout_marginStart="@dimen/dp15"
+        android:layout_marginTop="@dimen/dp30"
+        android:layout_marginEnd="@dimen/dp15"
+        android:layout_marginBottom="@dimen/dp15"
+        android:background="@drawable/bot_nav_back"
+        app:itemIconSize="@dimen/dp30"
+        app:itemIconTint="@drawable/item_kijeloles"
+        app:itemRippleColor="@color/atlatszoSarga"
+        app:itemActiveIndicatorStyle="@color/atlatszoSarga"
+        app:labelVisibilityMode="unlabeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/also_menu" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

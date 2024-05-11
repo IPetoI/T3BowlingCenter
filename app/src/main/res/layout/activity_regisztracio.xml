@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/hatterkep"
+    tools:context=".Activitys.RegisztracioActivity" >
+
+    <RelativeLayout
+        android:id="@+id/regisztacioRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:layout_marginStart="@dimen/dp30"
+        android:layout_marginEnd="@dimen/dp30"
+        android:background="@drawable/card_backg" >
+
+        <TextView
+            android:id="@+id/regisztracioTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp20"
+            android:layout_marginBottom="@dimen/dp30"
+            android:textSize="@dimen/sp40"
+            android:text="@string/regisztracio"
+            android:textAlignment="center"
+            android:textColor="@color/feher" />
+
+        <EditText
+            android:id="@+id/felhasznaloNevEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/regisztracioTextView"
+            android:layout_marginStart="@dimen/dp15"
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_marginEnd="@dimen/dp15"
+            android:textSize="@dimen/sp20"
+            android:hint="@string/nev"
+            android:importantForAutofill="yes"
+            android:autofillHints="name"
+            android:inputType="text"
+            android:textColor="@color/feher"
+            android:textColorHint="@color/feher"
+            android:backgroundTint="@color/feher"
+            android:textAlignment="center" />
+
+        <EditText
+            android:id="@+id/felhasznaloEmailEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/felhasznaloNevEditText"
+            android:layout_marginStart="@dimen/dp15"
+            android:layout_marginTop="@dimen/dp15"
+            android:layout_marginEnd="@dimen/dp15"
+            android:textSize="@dimen/sp20"
+            android:hint="@string/email"
+            android:importantForAutofill="yes"
+            android:autofillHints="emailAddress"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/feher"
+            android:textColorHint="@color/feher"
+            android:backgroundTint="@color/feher"
+            android:textAlignment="center" />
+
+        <EditText
+            android:id="@+id/felhasznaloTelefonEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/felhasznaloEmailEditText"
+            android:layout_marginStart="@dimen/dp15"
+            android:layout_marginTop="@dimen/dp15"
+            android:layout_marginEnd="@dimen/dp15"
+            android:textSize="@dimen/sp20"
+            android:text="@string/telefonszam"
+            android:maxLength="15"
+            android:editable="false"
+            android:focusable="false"
+            android:onClick="felhasznaloTelefonEditTextClickReg"
+            android:importantForAutofill="yes"
+            android:autofillHints="phone"
+            android:inputType="phone"
+            android:textColor="@color/feher"
+            android:backgroundTint="@color/feher"
+            android:textAlignment="center" />
+
+        <EditText
+            android:id="@+id/felhasznaloJelszoEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/felhasznaloTelefonEditText"
+            android:layout_marginStart="@dimen/dp15"
+            android:layout_marginTop="@dimen/dp15"
+            android:layout_marginEnd="@dimen/dp15"
+            android:textSize="@dimen/sp20"
+            android:hint="@string/jelszo"
+            android:importantForAutofill="no"
+            android:inputType="textPassword"
+            android:textColor="@color/feher"
+            android:textColorHint="@color/feher"
+            android:backgroundTint="@color/feher"
+            android:textAlignment="center" />
+
+        <EditText
+            android:id="@+id/felhasznaloJelszoIsmetEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/felhasznaloJelszoEditText"
+            android:layout_marginStart="@dimen/dp15"
+            android:layout_marginTop="@dimen/dp15"
+            android:layout_marginEnd="@dimen/dp15"
+            android:textSize="@dimen/sp20"
+            android:hint="@string/jelsz_megerosites"
+            android:importantForAutofill="no"
+            android:inputType="textPassword"
+            android:textColor="@color/feher"
+            android:textColorHint="@color/feher"
+            android:backgroundTint="@color/feher"
+            android:textAlignment="center" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/felhasznaloJelszoIsmetEditText"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dp30"
+            android:layout_marginBottom="@dimen/dp30" >
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/visszaGomb"
+                android:layout_width="@dimen/dp150"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp10"
+                android:textSize="@dimen/sp16"
+                android:onClick="vissza"
+                android:text="@string/vissza"
+                android:background="@drawable/gomb_backg"
+                android:textColor="@color/feher" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/regisztralokGomb"
+                android:layout_width="@dimen/dp150"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp10"
+                android:textSize="@dimen/sp16"
+                android:onClick="regisztralok"
+                android:text="@string/regisztralok"
+                android:background="@drawable/gomb_backg"
+                android:textColor="@color/feher" />
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>

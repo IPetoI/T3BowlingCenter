@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@color/arany"
+    android:paddingHorizontal="2dp">
+
+    <TextView
+        android:id="@+id/tablazatSzemelyekSzama"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_margin="1dp"
+        android:textSize="@dimen/sp16"
+        android:gravity="center"
+        android:background="@color/sotetNarancs"
+        android:textColor="@color/feher" />
+
+    <TextView
+        android:id="@+id/tablazatNap"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_margin="1dp"
+        android:textSize="@dimen/sp16"
+        android:gravity="center"
+        android:background="@color/sotetNarancs"
+        android:textColor="@color/feher" />
+
+    <TextView
+        android:id="@+id/tablazatOra"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.6"
+        android:layout_margin="1dp"
+        android:textSize="@dimen/sp16"
+        android:gravity="center"
+        android:background="@color/sotetNarancs"
+        android:textColor="@color/feher" />
+
+    <TextView
+        android:id="@+id/tablazatAr"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.7"
+        android:layout_margin="1dp"
+        android:textSize="@dimen/sp16"
+        android:gravity="center"
+        android:background="@color/sotetNarancs"
+        android:textColor="@color/feher" />
+
+    <ImageButton
+        android:id="@+id/idopontTorlesImageButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:layout_margin="1dp"
+        android:background="@drawable/gomb_backg"
+        android:contentDescription="@string/idopont_torlese"
+        app:srcCompat="@drawable/torles_icon" />
+
+</LinearLayout>
